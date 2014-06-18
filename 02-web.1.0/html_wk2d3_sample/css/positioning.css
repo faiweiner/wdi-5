@@ -1,0 +1,63 @@
+body {
+  background-color: pink;
+  min-height: 1000em;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  color: black;
+  border: 1px dashed black;
+  text-align: center;
+  line-height: 1em;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: red;
+}
+
+.absolute {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-color: yellow;
+}
+
+.absolute-z {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  background-color: purple;
+  color: white;
+}
+
+.z-1 {
+  z-index: 1
+  left: 600px;
+}
+
+.z-2 {
+  z-index: 2;  
+}
+
+.z-3 {
+  z-index: 3; 
+}
+
+.z-4 {
+  z-index: 4;  
+}
+
+.z-5 {
+  z-index: 5;  
+}

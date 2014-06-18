@@ -1,0 +1,6 @@
+<h1>Goods and Services</h1>
+
+<ul><% @receipts.each do |receipt| %>
+    <a href="/receipts/<%= receipt['id'] %>"><li><%= receipt['service'] %></li></a>
+  <% end %>
+</ul>

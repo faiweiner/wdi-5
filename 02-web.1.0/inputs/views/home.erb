@@ -1,0 +1,39 @@
+<form action="/processing" method="get">
+  <label for="name">Your name:
+    <input id="name" type="text" name="name" placeholder="Craigsy">
+  </label>
+
+  <label for="email">Your email:
+    <input type="email" name="email" id"email" placeholder="name@email.com" >
+  </label>  
+  <label for="bio">Your life story:
+    <textarea name="user_biography" id="bio" rows="4" placeholder="Your life story goes in here"></textarea>
+  </label>
+  <label for="spam">Yes! I'd like to receive spam!
+    <input type="checkbox" name="spam" id="spam" checked value"SPAM SPAM SPAM">
+  </label>
+  <label class="marx" for="favorite-brother">Favorite Marx brothers:<br>
+    <input class="radio" type="radio" name="favorite brother" value="groucho"> Groucho<br>
+    <input class="radio" type="radio" name="favorite brother" value="harpo"> Harpo<br>
+    <input class="radio" type="radio" name="favorite brother" value="chico"> Chico<br>
+    <input class="radio" type="radio" name="favorite brother" value="zeppo"> Zeppo<br>           
+  </label>
+
+  <label class="marx" for="second-favorite-brother">Second favorite Marx brother:</label>
+    <select name="second-favorite-brother" id="second-favorite-brother">
+      <option value="Groucho">Groucho</option>
+      <option value="Groucho">Harpo</option>
+      <option value="Groucho">Chico</option>
+      <option value="Groucho">Zeppo</option>
+    </select>
+
+<!--     <% @brothers.each do |brother| %>
+      <select value="<%= brother.downcase %>"><%= brother.upcase %></select>
+    <% end %> -->
+
+    <% ["groucho", "harpo", "chico", "zeppo"].each do |brother| %>
+      <option value="<%= brother.downcase %>">Zeppo</option><%= brother.capitalize %>
+    <% end %> 
+
+  <button type="submit">Submit that shizzat</button>
+</form>

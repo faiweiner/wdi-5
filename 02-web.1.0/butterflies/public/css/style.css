@@ -1,0 +1,13 @@
+body {
+  background-color: pink;
+  color: white;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.butterfly img {
+  max-width: 8em;
+}

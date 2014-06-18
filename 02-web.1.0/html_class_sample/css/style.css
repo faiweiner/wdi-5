@@ -1,0 +1,19 @@
+body {
+  background-color: green;
+  color: white;
+  font-size: 140%;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-style: italic;
+}
+
+.warning {
+  color: red;
+}
+
+#header {
+  color: pink;
+  text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+body {
+  background-color: pink;
+  font-family: arial
+}
+h1, p 
+{text-align: center
+}
+
+h2 {
+  color: blue;
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  color: white;
+}
+
+div {
+  background: blue;
+}
