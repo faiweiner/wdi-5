@@ -1,0 +1,37 @@
+body {
+  background-color: pink;
+  color: white;
+}
+
+nav {
+  background-color: purple;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  text-align: center;
+}
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.butterfly img {
+  max-width: 8em;
+}
+
+
+img.display {
+  max-width: 200px;
+}
+
+ul {
+  padding-left: 0;
+  padding-top: 30px;
+  list-style-type: none;
+
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
