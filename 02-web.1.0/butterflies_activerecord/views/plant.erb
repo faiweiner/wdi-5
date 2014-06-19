@@ -1,0 +1,11 @@
+<h1><%= @plant['name'] %></h1>
+<h2>Family: <%= @plant['family']%></h2>
+
+<img class="display" src="<%= @plant['image'] %>" alt="">
+
+<p>
+  <a href="/plants/<%= @plant['id'] %>/edit">Edit</a>
+</p>
+<p>
+  <a href="/plants/<%= @plant['id'] %>/delete">Delete</a>
+</p>

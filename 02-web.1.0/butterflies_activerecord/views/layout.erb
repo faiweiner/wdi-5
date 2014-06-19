@@ -8,13 +8,21 @@
 <body>
   <div class="container">
     <nav>
-      <ul>
-        <li><a href="/butterflies">View All</a></li>
-        <li><a href="/butterflies/new">Add</a></li>
-        <li>Families:</li>
+      <ul class="nav_b">
+        <li><a href="/butterflies">View All Butterflies</a></li>
+        <li><a href="/butterflies/new">Add Butterflies</a></li>
+        <li>Butterfly Families:</li>
+
         <% @families.each do |family| %>
           <li><a href="/butterflies/family/<%= family.family %>"><%= family.family %></a></li>
         <% end %>
+
+      </ul>
+      <ul class="nav_p">
+        <li><a href="/plants">View All Plants</a></li>
+        <li><a href="/plants/new">Add Plants</a></li>
+        <li>Plants: </li>
+      </ul>
     </nav>
     <%= yield %>
   </div>

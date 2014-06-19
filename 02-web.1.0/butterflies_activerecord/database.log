@@ -1,0 +1,6 @@
+D, [2014-06-19T12:56:22.197849 #3688] DEBUG -- :   [1m[36mButterfly Load (0.9ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T12:56:22.204258 #3688] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T12:56:32.242732 #3688] DEBUG -- :   [1m[36mButterfly Load (0.1ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T12:56:32.244217 #3688] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T12:56:51.875262 #3688] DEBUG -- :   [1m[36mButterfly Load (0.4ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T12:56:51.876848 #3688] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"

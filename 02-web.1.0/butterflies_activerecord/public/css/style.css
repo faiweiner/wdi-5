@@ -4,18 +4,36 @@ body {
 }
 
 nav {
-  background-color: purple;
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  text-align: center;
+  display: block;
 }
+.nav_p, .nav_b {
+  display: inline-block;
+  background-color: purple;
+  height: 100%;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  vertical-align: top;
+}
+
 #container {
   max-width: 960px;
   margin: auto;
 }
 
-.butterfly img {
+.left {
+  border: 1px dashed blue;
+  width: 40%;
+  display: inline-block;
+}
+.right {
+  border: 1px dashed blue;
+  width: 40%;
+  display: inline-block;
+}
+
+.butterfly img,
+.plant img {
   max-width: 8em;
 }
 
