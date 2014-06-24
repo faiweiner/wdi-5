@@ -17,7 +17,7 @@ require_relative 'plant'
 
 before do
   @families = Butterfly.select('family').uniq
-  @plants = Butterfly.all
+  @plants = Plant.all
   @butterflies = Butterfly.all
 end
 
@@ -90,6 +90,7 @@ post '/butterflies/:id' do
   butterfly.image = params[:image]
   butterfly.family = params[:family]
 
+  butterfly.plant_id = params[:plant_id]
   butterfly.save
 
   redirect to "/butterflies/#{ butterfly.id }"
@@ -134,7 +135,12 @@ post '/butterflies' do
   # butterfly.save
   # redirect to "/butterflies"
 
-  Butterfly.create :name => params[:name], :image => params[:image], :family => params[:family]
+  Butterfly.create(
+    :name => params[:name],
+    :image => params[:image],
+    :family => params[:family],
+    :plant_id => params[:plant_id]
+  )
 
   redirect to '/butterflies'
 end
@@ -142,12 +148,4 @@ end
 post '/plants' do
   Plant.create :name => params[:name], :image => params[:image]
   redirect to '/plants'
-end
-
-def query_db(sql)
-  db = SQLite3::Database.new "butterflies.db"
-  db.results_as_hash = true
-  result = db.execute sql
-  db.close
-  result
 end

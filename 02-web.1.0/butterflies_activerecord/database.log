@@ -1,6 +1,65 @@
-D, [2014-06-19T12:56:22.197849 #3688] DEBUG -- :   [1m[36mButterfly Load (0.9ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
-D, [2014-06-19T12:56:22.204258 #3688] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
-D, [2014-06-19T12:56:32.242732 #3688] DEBUG -- :   [1m[36mButterfly Load (0.1ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
-D, [2014-06-19T12:56:32.244217 #3688] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
-D, [2014-06-19T12:56:51.875262 #3688] DEBUG -- :   [1m[36mButterfly Load (0.4ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
-D, [2014-06-19T12:56:51.876848 #3688] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:09:57.227314 #4201] DEBUG -- :   [1m[36mButterfly Load (0.9ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T14:09:57.232819 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT "butterflies".* FROM "butterflies"
+D, [2014-06-19T14:09:57.234873 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:10:30.398129 #4201] DEBUG -- :   [1m[35mButterfly Load (0.3ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:10:30.401996 #4201] DEBUG -- :   [1m[36mButterfly Load (0.4ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:10:31.972540 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:10:31.977183 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:10:55.427177 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:10:55.427541 #4201] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2014-06-19T14:10:55.432785 #4201] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  UPDATE "butterflies" SET "image" = ?, "name" = ? WHERE "butterflies"."id" = 1  [["image", "http://1.thumbs.beta.scribol.com/6/sites/default/files/images/Red-Lacewing.jpg?a=d?a=b"], ["name", "Red lacewing"]]
+D, [2014-06-19T14:10:55.433928 #4201] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+D, [2014-06-19T14:10:55.441134 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:10:55.443139 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:14:09.509941 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:14:09.511804 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:14:14.835007 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:14:14.837278 #4201] DEBUG -- :   [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants"[0m
+D, [2014-06-19T14:14:14.840976 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:14:19.683081 #4201] DEBUG -- :   [1m[36mButterfly Load (0.1ms)[0m  [1mSELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1[0m  [["id", 1]]
+D, [2014-06-19T14:14:19.683391 #4201] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2014-06-19T14:14:19.683660 #4201] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2014-06-19T14:14:19.691234 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:14:19.693249 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:14:47.521267 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:14:47.523001 #4201] DEBUG -- :   [1m[36mPlant Load (0.3ms)[0m  [1mSELECT "plants".* FROM "plants"[0m
+D, [2014-06-19T14:14:47.525740 #4201] DEBUG -- :   [1m[35mButterfly Load (0.3ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:14:52.623085 #4201] DEBUG -- :   [1m[36mButterfly Load (0.1ms)[0m  [1mSELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1[0m  [["id", 1]]
+D, [2014-06-19T14:14:52.623409 #4201] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2014-06-19T14:14:52.624088 #4201] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mUPDATE "butterflies" SET "family" = ? WHERE "butterflies"."id" = 1[0m  [["family", "Nymphalidae"]]
+D, [2014-06-19T14:14:52.624765 #4201] DEBUG -- :   [1m[35m (0.5ms)[0m  commit transaction
+D, [2014-06-19T14:14:52.629898 #4201] DEBUG -- :   [1m[36mButterfly Load (0.1ms)[0m  [1mSELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1[0m  [["id", 1]]
+D, [2014-06-19T14:14:52.631857 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:16:39.337426 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:05.357414 #4201] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2014-06-19T14:17:05.358490 #4201] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "plants" ("image", "name") VALUES (?, ?)[0m  [["image", "http://www.shadowprincess.com/images/christmas/xmasbush.jpg"], ["name", "Christmas Bush"]]
+D, [2014-06-19T14:17:05.360305 #4201] DEBUG -- :   [1m[35m (1.5ms)[0m  commit transaction
+D, [2014-06-19T14:17:05.366594 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T14:17:05.396519 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:17:07.174244 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T14:17:07.176751 #4201] DEBUG -- :   [1m[35mButterfly Load (0.3ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:17:10.011744 #4201] DEBUG -- :   [1m[36mButterfly Load (0.1ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T14:17:10.013622 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:17:11.540915 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T14:17:11.542612 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:17:12.517374 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT "butterflies".* FROM "butterflies"[0m
+D, [2014-06-19T14:17:12.519818 #4201] DEBUG -- :   [1m[35mButterfly Load (0.3ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:17:16.174194 #4201] DEBUG -- :   [1m[36mButterfly Load (0.4ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:21.892113 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT "butterflies".* FROM "butterflies"
+D, [2014-06-19T14:17:21.893941 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:26.027395 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT "butterflies".* FROM "butterflies"
+D, [2014-06-19T14:17:26.029840 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:37.174635 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT "butterflies".* FROM "butterflies"
+D, [2014-06-19T14:17:37.176536 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:39.452650 #4201] DEBUG -- :   [1m[35mButterfly Load (0.2ms)[0m  SELECT "butterflies".* FROM "butterflies"
+D, [2014-06-19T14:17:39.454852 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:42.134580 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:17:42.137290 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
+D, [2014-06-19T14:17:43.699144 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:17:43.700855 #4201] DEBUG -- :   [1m[36mPlant Load (0.2ms)[0m  [1mSELECT "plants".* FROM "plants"[0m
+D, [2014-06-19T14:17:43.703222 #4201] DEBUG -- :   [1m[35mButterfly Load (0.3ms)[0m  SELECT DISTINCT "butterflies"."family" FROM "butterflies"
+D, [2014-06-19T14:17:48.962003 #4201] DEBUG -- :   [1m[36mButterfly Load (0.3ms)[0m  [1mSELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1[0m  [["id", 1]]
+D, [2014-06-19T14:17:48.962861 #4201] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2014-06-19T14:17:48.963340 #4201] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2014-06-19T14:17:48.970184 #4201] DEBUG -- :   [1m[35mButterfly Load (0.1ms)[0m  SELECT  "butterflies".* FROM "butterflies"  WHERE "butterflies"."id" = ? LIMIT 1  [["id", 1]]
+D, [2014-06-19T14:17:48.972048 #4201] DEBUG -- :   [1m[36mButterfly Load (0.2ms)[0m  [1mSELECT DISTINCT "butterflies"."family" FROM "butterflies"[0m
