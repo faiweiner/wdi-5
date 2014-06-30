@@ -11,7 +11,16 @@ class QuestionsController < ActionController::Base
     @choices_tracks = @tracks_array.sample(4)
     @selected_track = @choices_tracks.sample
 
-    q = Question.new
+    @question = Question.new
+  end
 
+  def create
+    @quesion = Question.new question_params
+  end
+
+  private
+
+  def question_params
+    params.require(:question).permit(:correct, )
   end
 end

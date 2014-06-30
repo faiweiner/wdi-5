@@ -5,6 +5,6 @@
 <% @choices_tracks.each do |track| %>
   <div>
     <%= track.name %>
-    <%= track.uri if track.name == @selected_track.name %>
+    <%= track.uri.gsub!('spotify:track:','') if track.name == @selected_track.name %>
   </div>
 <% end %>

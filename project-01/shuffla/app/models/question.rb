@@ -8,6 +8,7 @@
 #  updated_at :datetime
 #  artist_id  :string(255)
 #  genre_id   :string(255)
+#  finish_at  :datetime
 #
 
 class Question < ActiveRecord::Base
