@@ -1,9 +1,10 @@
 <h1>New Question</h1>
 
-<p>
-  <%= @selected_track.name %>, SPOTIFY URI: <%= @selected_track.uri.gsub!('spotify:track:', '') %>
-  <br>
-  <%= @selected_artist.name %>
-</p>
-
 <iframe src="https://embed.spotify.com/?uri=spotify:track:<%= @selected_track.uri%>" frameborder="0" allowtransparency="true"></iframe>
+
+<% @choices_tracks.each do |track| %>
+  <div>
+    <%= track.name %>
+    <%= track.uri if track.name == @selected_track.name %>
+  </div>
+<% end %>

@@ -6,22 +6,10 @@ class QuestionsController < ActionController::Base
   def new
     @artists = RSpotify::Artist.search("Rihanna")
     @selected_artist = @artists.first
-    tracks_array = @selected_artist.top_tracks(:US)
-    @selected_track = tracks_array.sample
-    # @song_list = []
-    # @artists.each do |artist|
-    #   top_tracks = artist.top_tracks(:US)
-    #   top_tracks.map do |t|
-    #     @song_list << t.id
-    #   end
-    # end
-    # @links = ''
-    # @song_list.each do |song|
-    #   @links += song
-    #   @links += ',' unless song == @song_list.last
-    # end
-    # @selected_song_uri = @song_list.sample
-    # @selected_song = RSpotify::Track.find(@selected_song_uri)
+    @tracks_array = @selected_artist.top_tracks(:US)
+    @choices_tracks = []
+    @choices_tracks = @tracks_array.sample(4)
+    @selected_track = @choices_tracks.sample
 
     q = Question.new
 
