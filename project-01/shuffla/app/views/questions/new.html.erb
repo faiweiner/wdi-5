@@ -3,8 +3,11 @@
 <iframe src="https://embed.spotify.com/?uri=spotify:track:<%= @selected_track.uri%>" frameborder="0" allowtransparency="true"></iframe>
 
 <% @choices_tracks.each do |track| %>
-  <div>
-    <%= track.name %>
-    <%= track.uri.gsub!('spotify:track:','') if track.name == @selected_track.name %>
-  </div>
+  <%= form_tag(questions_path, method: "post") do %>
+    <%= label_tag(:answer_selection, track.name) %>
+    <%= hidden_field_tag(:answer_selection, track.uri.gsub('spotify:track:','')) %>
+    <%= hidden_field_tag(:answer, @selected_track.uri.gsub('spotify:track:','')) %>
+   <%= hidden_field_tag(:question_id, @question_id) %>
+    <%= submit_tag(track.name, :id => track.uri) %>
+  <% end %>
 <% end %>

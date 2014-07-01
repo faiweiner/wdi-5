@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :games
   resources :questions
 
+  post '/questions/new' => 'questions#new'
+
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'

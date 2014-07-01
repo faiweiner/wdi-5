@@ -9,6 +9,7 @@
 #  artist_id  :string(255)
 #  genre_id   :string(255)
 #  finish_at  :datetime
+#  points     :decimal(, )
 #
 
 class Question < ActiveRecord::Base
