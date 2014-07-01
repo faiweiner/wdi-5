@@ -12,12 +12,14 @@ class QuestionsController < ApplicationController
     @question = Question.new
     @question.save
 
-    @question_id = @question.id
+    @question_id = @question.id 
   end
 
   def create 
     @question = Question.find params[:question_id]
+    @question.game_id = params[:game_id]
     @question.finish_at = Time.now
+    raise params.inspect
     if params[:answer_selection] == params[:answer]
       @question.correct = true 
     else
