@@ -13,7 +13,8 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find params[:id]
-    @game.artist_id = Game.last.questions.first.artist_id
+    artist_id = Question.last.artist_id
+    @artist_test_name = RSpotify::Artist.find(artist_id).name
     @game_question_count = Game.last.questions.count
     @game_correct_count = Game.last.questions.where("correct = true").count
     total_time = 0 #

@@ -15,7 +15,6 @@ class QuestionsController < ApplicationController
       @selected_track = @choices_tracks.sample
 
       @question = Question.new
-      @question.artist_id = @selected_artist.id
       @question.save
 
       @question_id = @question.id # Pass current object's ID into an instance variable to be accessible in the Create view
@@ -31,7 +30,7 @@ class QuestionsController < ApplicationController
     else
       @question.correct = false 
     end
-    @question.points = @question.finish_at - @question.created_at
+    @question.duration = @question.finish_at - @question.created_at
     @question.save
 
     redirect_to new_question_path
