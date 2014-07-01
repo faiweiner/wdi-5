@@ -9,7 +9,7 @@
 #  artist_id  :string(255)
 #  genre_id   :string(255)
 #  finish_at  :datetime
-#  points     :float
+#  duration   :float
 #  game_id    :integer
 #
 

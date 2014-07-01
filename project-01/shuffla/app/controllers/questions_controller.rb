@@ -1,7 +1,9 @@
 class QuestionsController < ApplicationController
   def new
-    if #
-      #redirect to stats
+    # once the user has answered X questions, user will be redirected to the Game Summary page (stats)
+    if @current_user.games.last.questions.count == 7
+      @game_id = Game.last.id #pull Game ID for the following view to pull up statistics
+      redirect_to game_path(id:@game_id)
     else
       @game = Game.where(:user_id => @current_user.id).last
 
@@ -13,9 +15,10 @@ class QuestionsController < ApplicationController
       @selected_track = @choices_tracks.sample
 
       @question = Question.new
+      @question.artist_id = @selected_artist.id
       @question.save
 
-      @question_id = @question.id 
+      @question_id = @question.id # Pass current object's ID into an instance variable to be accessible in the Create view
     end
   end
 

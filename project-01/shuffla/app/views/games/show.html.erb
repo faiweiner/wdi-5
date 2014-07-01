@@ -1,0 +1,14 @@
+CONGRATS - YOU MADE IT THROUGH THE GAME!
+<div>
+  Question Artist: <%= @game.artist_id %>
+</div>
+<div>  
+  Correct: <%= @game_correct_count %>
+</div>
+
+<div>
+  Average Time: <%= @game_avg_time.round(2) %> seconds
+</div>
+<div>
+  Round Score: <%= @game.total_time_points.round(2) %> points
+</div>

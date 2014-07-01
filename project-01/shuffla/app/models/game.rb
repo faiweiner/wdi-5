@@ -4,7 +4,7 @@
 #
 #  id                :integer          not null, primary key
 #  total_correct     :integer
-#  total_time_points :integer
+#  total_time_points :float
 #  genre             :string(255)
 #  created_at        :datetime
 #  updated_at        :datetime
