@@ -1,25 +1,28 @@
 class QuestionsController < ApplicationController
   def new
-    @game = Game.where(:user_id => @current_user.id).last
+    if #
+      #redirect to stats
+    else
+      @game = Game.where(:user_id => @current_user.id).last
 
-    @artists = RSpotify::Artist.search("Rihanna")
-    @selected_artist = @artists.first
-    @tracks_array = @selected_artist.top_tracks(:US)
-    @choices_tracks = []
-    @choices_tracks = @tracks_array.sample(4)
-    @selected_track = @choices_tracks.sample
+      @artists = RSpotify::Artist.search("Rihanna")
+      @selected_artist = @artists.first
+      @tracks_array = @selected_artist.top_tracks(:US)
+      @choices_tracks = []
+      @choices_tracks = @tracks_array.sample(4)
+      @selected_track = @choices_tracks.sample
 
-    @question = Question.new
-    @question.save
+      @question = Question.new
+      @question.save
 
-    @question_id = @question.id 
+      @question_id = @question.id 
+    end
   end
 
   def create 
     @question = Question.find params[:question_id]
     @question.game_id = params[:game_id]
     @question.finish_at = Time.now
-    raise params.inspect
     if params[:answer_selection] == params[:answer]
       @question.correct = true 
     else
