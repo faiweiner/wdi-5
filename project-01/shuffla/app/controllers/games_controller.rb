@@ -9,10 +9,12 @@ class GamesController < ApplicationController
     #if params come from Artist Search =>
     @artists = RSpotify::Artist.search(params[:search])
     @selected_artist = @artists.first
-    
+    @selected_artist_uri = @selected_artist.uri.gsub!('spotify:artist:','')
+  
     @game = Game.new
     # Come back here to fix BUG - what if user drops out mid-game?
     @game.user_id = @current_user.id
+    @game.artist_id = @selected_artist_uri
     @game.save
 
     redirect_to games_new_artist_path

@@ -7,11 +7,11 @@ class QuestionsController < ApplicationController
     else
       @game = Game.where(:user_id => @current_user.id).last
 
-      @artists = RSpotify::Artist.search(params[:search])
+      @artists = RSpotify::Artist.find(Game.artist_id)
       raise params.inspect
       @selected_artist = @artists.first
       @selected_artist_uri = @selected_artist.uri.gsub!('spotify:artist:','')
-      
+
       @tracks_array = @selected_artist.top_tracks(:US)
       @choices_tracks = []
       @choices_tracks = @tracks_array.sample(4)
