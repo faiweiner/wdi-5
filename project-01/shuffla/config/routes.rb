@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   post '/questions/new' => 'questions#new'
 
   get '/login' => 'session#new'
-  post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+  post '/login' => 'session#login_attempt'
+  delete '/login' => 'session#logout'
 end

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :check_if_logged_in, :except => [:new, :create]
-  before_action :check_if_admin, :only => [:index]
+  before_action :save_login_state, :only => [:new, :create]
 
   def new
     @user = User.new
@@ -9,8 +9,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      flash[:notice] = "You've successfully signed up."
+      flash[:color] = "valid"
       redirect_to root_path
     else
+      flash[:notice] = "Unsuccessful sign up, please try again."
+      flash[:color] = "invalid"
       render :new
     end
   end

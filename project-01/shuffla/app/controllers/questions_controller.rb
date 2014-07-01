@@ -1,6 +1,7 @@
-class QuestionsController < ActionController::Base
+class QuestionsController < ApplicationController
   def new
-    raise params.inspect
+    @game = Game.where(:user_id => @current_user.id).last
+
     @artists = RSpotify::Artist.search("Rihanna")
     @selected_artist = @artists.first
     @tracks_array = @selected_artist.top_tracks(:US)

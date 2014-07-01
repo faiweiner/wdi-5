@@ -11,7 +11,12 @@
 #
 
 class User < ActiveRecord::Base
-  validates :username, :presence => true, :length => { :minimum => 2, }
+
+  EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :username, :presence => true, :uniqueness => true, :length => { :minimum => 2, }
+  validates_format_of :username, :with => EmailRegex
+  validates :password_digest, length: { in: 6..20 }
   has_secure_password
   has_many :games
   has_many :playlists

@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   before_action :authenticate_user
+  before_action :save_login_state, :only => [:new, :login_attempt]
 
   private
 
@@ -14,6 +15,14 @@ class ApplicationController < ActionController::Base
 
     if @current_user.nil?
       session[:user_id] = nil
+    end
+  end
+
+  def save_login_state
+    if session[:user_id].present?
+      return false
+    else
+      return true
     end
   end
 end
