@@ -1,15 +1,14 @@
 class QuestionsController < ApplicationController
   def new
     # once the user has answered X questions, user will be redirected to the Game Summary page (stats)
+    ### BUGGGG!! Users cannot play again with the below code!
     if Game.last.questions.count == 7
       @game_id = Game.last.id #pull Game ID for the following view to pull up statistics
       redirect_to game_path(id:@game_id)
     else
       @game = Game.where(:user_id => @current_user.id).last
 
-      @artists = RSpotify::Artist.find(Game.artist_id)
-      raise params.inspect
-      @selected_artist = @artists.first
+      @selected_artist = RSpotify::Artist.find(@game.artist_id)
       @selected_artist_uri = @selected_artist.uri.gsub!('spotify:artist:','')
 
       @tracks_array = @selected_artist.top_tracks(:US)
