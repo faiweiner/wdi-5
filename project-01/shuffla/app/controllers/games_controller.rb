@@ -1,14 +1,28 @@
 class GamesController < ApplicationController
   def index
-
   end
+
   def new
-    @game = Game.new
-    @game.user_id = @current_user.id
-    @game.save
   end
 
   def create
+    #if params come from Artist Search =>
+    @artists = RSpotify::Artist.search(params[:search])
+    @selected_artist = @artists.first
+    
+    @game = Game.new
+    # Come back here to fix BUG - what if user drops out mid-game?
+    @game.user_id = @current_user.id
+    @game.save
+
+    redirect_to games_new_artist_path
+  end
+
+  def genre
+  end
+  def playlist
+  end
+  def artist
   end
 
   def show

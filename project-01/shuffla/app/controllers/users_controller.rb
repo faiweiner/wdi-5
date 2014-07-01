@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:notice] = "You've successfully signed up."
+      # Once someone signs up, they currently need to log in. Better to have automatically log-in?
       flash[:color] = "valid"
       redirect_to root_path
     else
