@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140701000126) do
+ActiveRecord::Schema.define(version: 20140701002521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,8 @@ ActiveRecord::Schema.define(version: 20140701000126) do
     t.string   "artist_id"
     t.string   "genre_id"
     t.datetime "finish_at"
-    t.decimal  "points"
+    t.float    "points"
+    t.integer  "game_id"
   end
 
   create_table "users", force: true do |t|

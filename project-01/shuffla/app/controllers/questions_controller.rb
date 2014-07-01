@@ -1,21 +1,17 @@
 class QuestionsController < ActionController::Base
   def new
-    unless params[:commit] == nil
-      @querk = params[:commit]
-    else
-      @artists = RSpotify::Artist.search("Rihanna")
-      @selected_artist = @artists.first
-      @tracks_array = @selected_artist.top_tracks(:US)
-      @choices_tracks = []
-      @choices_tracks = @tracks_array.sample(4)
-      @selected_track = @choices_tracks.sample
+    raise params.inspect
+    @artists = RSpotify::Artist.search("Rihanna")
+    @selected_artist = @artists.first
+    @tracks_array = @selected_artist.top_tracks(:US)
+    @choices_tracks = []
+    @choices_tracks = @tracks_array.sample(4)
+    @selected_track = @choices_tracks.sample
 
-      @question = Question.new
-      @question.save
+    @question = Question.new
+    @question.save
 
-      @question_id = @question.id
-    end
-
+    @question_id = @question.id
   end
 
   def create 
@@ -29,7 +25,6 @@ class QuestionsController < ActionController::Base
     @question.points = @question.finish_at - @question.created_at
     @question.save
 
-    raise params.inspect
     redirect_to new_question_path
   end
 
