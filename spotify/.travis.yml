@@ -1,0 +1,21 @@
+language: ruby
+script: "bundle exec ruby -W -S rspec spec"
+cache: bundler
+rvm:
+  - 2.0
+  - 2.1
+  - ruby-head
+  - rbx-2
+  - jruby
+env:
+  - RUBY_PLATFORM="x86_64-linux"
+  - RUBY_PLATFORM="x86_64-darwin11.3.0"
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+notifications:
+  email:
+    recipients:
+      - kim@burgestrand.se
+    on_success: change
+    on_failure: change

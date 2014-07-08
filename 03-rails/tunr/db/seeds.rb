@@ -21,9 +21,9 @@ r1 = Artist.create(:name => 'Mission of Burma')
 r2 = Artist.create(:name => 'John and Darlene Edwards')
 r3 = Artist.create(:name => 'Animal Collective')
 
-u1 = User.create(:username => 'peter', :avatar => 'http://png-1.findicons.com/files/icons/1072/face_avatars/300/i04.png', :password => 'password', :password_confirmation => 'password_confirmation')
-u2 = User.create(:username => 'cy', :avatar => 'https://cdn1.iconfinder.com/data/icons/popo_emotions_full_png/popo_emotions_addon/too_sad.png', :password => 'password', :password_confirmation => 'password_confirmation')
-u3 = User.create(:username => 'craigsy', :avatar => 'http://png-1.findicons.com/files/icons/1072/face_avatars/300/i04.png', :password => 'password', :password_confirmation => 'password_confirmation')
+u1 = User.create(:username => 'peter', :avatar => 'http://png-1.findicons.com/files/icons/1072/face_avatars/300/i04.png', :password => 'password', :password_confirmation => 'password')
+u2 = User.create(:username => 'cy', :avatar => 'https://cdn1.iconfinder.com/data/icons/popo_emotions_full_png/popo_emotions_addon/too_sad.png', :password => 'password', :password_confirmation => 'password')
+u3 = User.create(:username => 'craigsy', :avatar => 'http://png-1.findicons.com/files/icons/1072/face_avatars/300/i04.png', :password => 'password', :password_confirmation => 'password', :is_admin => true)
 
 m1 = Mixtape.create(:name => 'Work')
 m2 = Mixtape.create(:name => 'Angry')

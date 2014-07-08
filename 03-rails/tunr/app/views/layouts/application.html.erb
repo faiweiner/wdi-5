@@ -10,10 +10,15 @@
   <nav>
     <ul>
       <li><%= link_to('Home', '/') %></li>
-      <li><%= link_to('Sign up', new_user_path) %></li>
-      <li><%= link_to('Sign in', login_path) %></li>
+      <%== smartnav %>
     </ul>
   </nav>
+
+<% if flash[:notice].present? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+<% end %>
 <%= yield %>
 
 </body>

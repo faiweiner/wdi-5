@@ -1,9 +1,8 @@
-%p= @current_user
-
 %h1 Caravan of Courage
 
 %h2= @starring
 
+= @current_user.username if @current_user.present?
 
 %strong{:class => "code", :id => "message"} Hello, world!
 

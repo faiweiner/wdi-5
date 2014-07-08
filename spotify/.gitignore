@@ -1,0 +1,11 @@
+*.rbc
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+doc/
+.yardoc
+.rbx
+*.rbc
+.spotify/
+spotify_appkey.key
