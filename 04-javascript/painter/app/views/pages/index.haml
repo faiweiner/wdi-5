@@ -1,0 +1,14 @@
+%h1 Paintr
+%div#command_center
+  %div.box#selected
+  = text_field_tag 'color', nil, :autofocus => true
+  = button_tag 'add color', :id => 'add_color'
+  = button_tag 'clear swatches', :id => 'clear'
+  = button_tag 'start over', :id => 'reset_canvas'
+
+  = text_field_tag 'background-image', nil
+  = button_tag 'add background', :id => 'add_bg'
+
+  %div#colors
+
+%div#canvas

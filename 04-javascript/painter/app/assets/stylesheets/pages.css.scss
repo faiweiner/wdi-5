@@ -1,0 +1,41 @@
+body {
+  display: relative;
+}
+.box {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+#selected {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+}
+
+.pixel {
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  border: 1px solid #e7e7e7;
+}
+
+#command_center {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#colors {
+  max-width: 800px;
+  height: 20px;
+  overflow-x: scroll;
+}
+#canvas {
+  height: auto;
+  max-width: 800px;
+  max-height: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+}
