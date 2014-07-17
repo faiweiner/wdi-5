@@ -14,18 +14,8 @@
  *= require_self
  */
 
-.invisible {
-  display: none;
-}
 
-.priority {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-.priority:hover {
-  border: 1px solid red;
+#container {
+  width: 960px;
+  margin: 0 auto;
 }
